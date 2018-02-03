@@ -2,9 +2,11 @@ from fabric.api import env, run
 from fabric.operations import sudo
 
 GIT_REPO = "you git repository" 
+env.use_ssh_config = True
 
-env.user = 'you host username'
-env.password = 'you host password'
+env.user = 'root'
+env.key_filename = '/Users/zz/.ssh/wx_zz.pem'
+# env.password = 'you host password'
 
 # 填写你自己的主机对应的域名
 env.hosts = ['47.88.49.150']
